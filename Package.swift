@@ -17,8 +17,7 @@ let package = Package(
         .package(url: "https://github.com/google/GoogleUtilities", from: "8.1.0"),
         .package(url: "https://github.com/google/promises", from: "2.4.0"),
         .package(url: "https://github.com/firebase/nanopb", from: "2.30910.0"),
-        .package(url: "https://github.com/google/gtm-session-fetcher", from: "5.3.0"),
-        .package(url: "https://github.com/google/google-toolbox-for-mac", from: "6.0.0")
+        .package(url: "https://github.com/google/gtm-session-fetcher", from: "5.3.0")
     ],
     targets: [
         .binaryTarget(
@@ -33,11 +32,10 @@ let package = Package(
                 .product(name: "TensorFlowLiteTaskVision", package: "Tensorflow"),
                 .product(name: "SVProgressHUD", package: "SVProgressHUD"),
                 .product(name: "GoogleDataTransport", package: "GoogleDataTransport"),
-                .product(name: "GoogleUtilities-Environment", package: "GoogleUtilities"),
+                .product(name: "GULEnvironment", package: "GoogleUtilities"),
                 .product(name: "FBLPromises", package: "promises"),
                 .product(name: "nanopb", package: "nanopb"),
-                .product(name: "GTMSessionFetcher", package: "gtm-session-fetcher"),
-                .product(name: "GoogleToolboxForMac", package: "google-toolbox-for-mac")
+                .product(name: "GTMSessionFetcher", package: "gtm-session-fetcher")
             ],
             path: "Sources/AccuraOCRSPM"
         )
