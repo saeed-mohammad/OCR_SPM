@@ -11,7 +11,7 @@ let package = Package(
         .library(name: "AccuraOCR", targets: ["AccuraOCRSPM"])
     ],
     dependencies: [
-        .package(url: "https://github.com/saeed-mohammad/Tensorflow", exact: "1.0.6"),
+        .package(url: "https://github.com/saeed-mohammad/Tensorflow", exact: "1.0.7"),
         .package(url: "https://github.com/SVProgressHUD/SVProgressHUD", from: "2.3.1"),
         .package(url: "https://github.com/google/GoogleDataTransport", from: "10.1.0"),
         .package(url: "https://github.com/google/GoogleUtilities", from: "8.1.0"),

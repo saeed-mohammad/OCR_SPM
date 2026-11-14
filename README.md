@@ -18,4 +18,4 @@ Or in `Package.swift`:
 import AccuraOCR
 ```
 
-Dependencies pulled in automatically: TensorFlowLiteTaskVision (saeed-mohammad/Tensorflow 1.0.6), SVProgressHUD and the Google support libraries.
+Dependencies pulled in automatically: TensorFlowLiteTaskVision (saeed-mohammad/Tensorflow 1.0.7), SVProgressHUD and the Google support libraries.
