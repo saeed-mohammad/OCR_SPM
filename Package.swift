@@ -11,13 +11,7 @@ let package = Package(
         .library(name: "AccuraOCR", targets: ["AccuraOCRSPM"])
     ],
     dependencies: [
-        .package(url: "https://github.com/saeed-mohammad/Tensorflow", exact: "1.0.7"),
-        .package(url: "https://github.com/SVProgressHUD/SVProgressHUD", from: "2.3.1"),
-        .package(url: "https://github.com/google/GoogleDataTransport", from: "10.1.0"),
-        .package(url: "https://github.com/google/GoogleUtilities", from: "8.1.0"),
-        .package(url: "https://github.com/google/promises", from: "2.4.0"),
-        .package(url: "https://github.com/firebase/nanopb", from: "2.30910.0"),
-        .package(url: "https://github.com/google/gtm-session-fetcher", from: "5.3.0")
+        .package(url: "https://github.com/saeed-mohammad/Tensorflow", exact: "1.0.7")
     ],
     targets: [
         .binaryTarget(
@@ -25,17 +19,28 @@ let package = Package(
             url: "https://github.com/saeed-mohammad/OCR_SPM/releases/download/0.0.1/AccuraOCR.xcframework.zip",
             checksum: "39afb672db9766f8f45bfe4fe4b65dc9bc5babaa984d5abcad35105f8ad81418"
         ),
+        // Dynamic frameworks that AccuraOCR.framework loads at launch via @rpath.
+        // Built from CocoaPods: PromisesObjC 2.4.1, GoogleDataTransport 9.4.1, GoogleUtilities 7.13.3,
+        // nanopb 2.30910.0, GTMSessionFetcher 3.5.0, GoogleToolboxForMac 4.2.1, SVProgressHUD 2.3.1.
+        .binaryTarget(name: "FBLPromises", path: "Frameworks/FBLPromises.xcframework"),
+        .binaryTarget(name: "GoogleDataTransport", path: "Frameworks/GoogleDataTransport.xcframework"),
+        .binaryTarget(name: "GoogleUtilities", path: "Frameworks/GoogleUtilities.xcframework"),
+        .binaryTarget(name: "nanopb", path: "Frameworks/nanopb.xcframework"),
+        .binaryTarget(name: "GTMSessionFetcher", path: "Frameworks/GTMSessionFetcher.xcframework"),
+        .binaryTarget(name: "GoogleToolboxForMac", path: "Frameworks/GoogleToolboxForMac.xcframework"),
+        .binaryTarget(name: "SVProgressHUD", path: "Frameworks/SVProgressHUD.xcframework"),
         .target(
             name: "AccuraOCRSPM",
             dependencies: [
                 "AccuraOCR",
                 .product(name: "TensorFlowLiteTaskVision", package: "Tensorflow"),
-                .product(name: "SVProgressHUD", package: "SVProgressHUD"),
-                .product(name: "GoogleDataTransport", package: "GoogleDataTransport"),
-                .product(name: "GULEnvironment", package: "GoogleUtilities"),
-                .product(name: "FBLPromises", package: "promises"),
-                .product(name: "nanopb", package: "nanopb"),
-                .product(name: "GTMSessionFetcher", package: "gtm-session-fetcher")
+                "FBLPromises",
+                "GoogleDataTransport",
+                "GoogleUtilities",
+                "nanopb",
+                "GTMSessionFetcher",
+                "GoogleToolboxForMac",
+                "SVProgressHUD"
             ],
             path: "Sources/AccuraOCRSPM"
         )
