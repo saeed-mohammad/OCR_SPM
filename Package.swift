@@ -20,8 +20,8 @@ let package = Package(
             checksum: "39afb672db9766f8f45bfe4fe4b65dc9bc5babaa984d5abcad35105f8ad81418"
         ),
         // Dynamic frameworks that AccuraOCR.framework loads at launch via @rpath.
-        // Built from CocoaPods: PromisesObjC 2.4.1, GoogleDataTransport 9.4.1, GoogleUtilities 7.13.3,
-        // nanopb 2.30910.0, GTMSessionFetcher 3.5.0, GoogleToolboxForMac 4.2.1, SVProgressHUD 2.3.1.
+        // Built from CocoaPods: PromisesObjC 2.4.1, GoogleDataTransport 10.1.1, GoogleUtilities 8.1.5,
+        // nanopb 3.30910.0, GTMSessionFetcher 5.3.1, GoogleToolboxForMac 6.0.1, SVProgressHUD 2.3.1.
         .binaryTarget(name: "FBLPromises", path: "Frameworks/FBLPromises.xcframework"),
         .binaryTarget(name: "GoogleDataTransport", path: "Frameworks/GoogleDataTransport.xcframework"),
         .binaryTarget(name: "GoogleUtilities", path: "Frameworks/GoogleUtilities.xcframework"),
