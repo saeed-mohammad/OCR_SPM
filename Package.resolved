@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "tensorflow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/saeed-mohammad/Tensorflow",
+      "state" : {
+        "revision" : "ebc568522b7257d875c132be99679943fde147d4",
+        "version" : "1.0.7"
+      }
+    }
+  ],
+  "version" : 2
+}

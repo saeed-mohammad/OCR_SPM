@@ -16,8 +16,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AccuraOCR",
-            url: "https://github.com/saeed-mohammad/OCR_SPM/releases/download/0.0.6/AccuraOCR.xcframework.zip",
-            checksum: "31fb7293bd1c6f39044f3e46c520f49a700eaa7eac95a7b83f4733dcfff8c348"
+            url: "https://github.com/saeed-mohammad/OCR_SPM/releases/download/0.0.7/AccuraOCR.xcframework.zip",
+            checksum: "1b4ca1f35b2a956a7cff2ee4fbff0db783e3d0b2deeb782a4d3cb256d524ccd1"
         ),
         // Dynamic frameworks that AccuraOCR.framework loads at launch via @rpath.
         // Built from CocoaPods: PromisesObjC 2.4.1, GoogleDataTransport 10.1.1, GoogleUtilities 8.1.5,
